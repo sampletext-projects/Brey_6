@@ -29,7 +29,9 @@ int main()
 
 	for (int i = -5; i <= 5; i++)
 	{
-		cout << setprecision(5) << S(i / 10., 0.001) << endl;
+		cout << setprecision(10) << S(i / 10., 0.01) << "\t";
+		cout << setprecision(10) << S(i / 10., 0.001) << "\t";
+		cout << setprecision(10) << S(i / 10., 0.0001) << endl;
 	}
 
 	system("pause");
