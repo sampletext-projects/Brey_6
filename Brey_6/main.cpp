@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <iomanip>
 
+const double pi = 3.14159265358979323846;
+
 using namespace std;
 
 double S(double x, double e)
@@ -27,11 +29,11 @@ int main()
 	cout << "Программу сделала Белевцева Дарья Юрьевна студент группы УМЛ-112\n";
 	cout << "Программа для расчёта ряда чисел\n";
 
-	for (int i = -5; i <= 5; i++)
+	for (double i = -pi; i <= pi; i += pi / 36)
 	{
-		cout << setprecision(10) << S(i / 10., 0.01) << "\t";
-		cout << setprecision(10) << S(i / 10., 0.001) << "\t";
-		cout << setprecision(10) << S(i / 10., 0.0001) << endl;
+		cout << setprecision(8) << S(i, 0.01) << "\t";
+		cout << setprecision(8) << S(i, 0.001) << "\t";
+		cout << setprecision(8) << S(i, 0.0001) << endl;
 	}
 
 	system("pause");
